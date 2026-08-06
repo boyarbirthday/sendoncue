@@ -15,8 +15,10 @@ permissions:
   id-token: write
 
 # Never run two deploys at once; let a newer push finish rather than cancelling it.
+# Keyed by ref rather than a bare "pages", so a run that GitHub wedges cannot
+# block every future deploy behind it.
 concurrency:
-  group: pages
+  group: pages-${{ github.ref }}
   cancel-in-progress: false
 
 jobs:
