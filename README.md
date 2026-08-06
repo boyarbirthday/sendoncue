@@ -23,7 +23,9 @@ There is no build step, no framework and no dependency. Four static pages and on
 stylesheet.
 
 The color tokens in `assets/styles.css` are copied from the app's `Theme.swift`, so
-the site and the app are literally the same palette in light and in dark. Type uses
+the site and the app are literally the same palette. The site is pinned to the warm
+paper light look for every visitor regardless of their browser's dark mode, and per
+the brand, "white" is always the cream `#EBE6D8` canvas, never `#FFF`. Type uses
 the system stack, which means an iPhone visitor is served New York and SF Pro: the
 exact fonts the app draws with, with no webfont request and no layout shift.
 

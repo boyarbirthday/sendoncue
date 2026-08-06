@@ -162,8 +162,9 @@ on the domain reads better on an App Store listing than a Gmail address.
 - Open every page on a phone and check the light and the dark rendering
 - Submit `https://sendoncue.com/sitemap.xml` in Google Search Console and Bing
   Webmaster Tools, so the site is findable by name
-- When the app is approved, add the App Store link to the hero button in
-  `index.html`, replacing the "Tell me when it lands" mailto
+- When the app is approved, swap in the App Store link in `index.html` at the two
+  commented spots (the hero CTA and the closing "get" section), and change both
+  "Soon on the App Store" pills to "On the App Store"
 
 ---
 
