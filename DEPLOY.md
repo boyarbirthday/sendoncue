@@ -46,6 +46,13 @@ that ships in the app anyway.
 Source is set to **GitHub Actions**, and `.github/workflows/pages.yml` deploys on
 every push to `main`. The first run is green and the site is serving.
 
+One thing worth knowing: GitHub will not start a workflow run for a push made with
+a token it treats as automation, which includes the `gh` CLI's own OAuth token. So
+the pushes made while setting this up did not auto-deploy and were dispatched by
+hand. **An ordinary `git push` from your machine, or an edit saved in the GitHub
+web editor, does trigger it.** If a deploy ever fails to appear, run
+`gh workflow run pages.yml`, or press **Run workflow** on the Actions tab.
+
 The custom domain `sendoncue.com` is also already registered on GitHub's side, both
 by the `CNAME` file in this repo and through the Pages settings. It will start
 working the moment DNS points at it, which is the next section.

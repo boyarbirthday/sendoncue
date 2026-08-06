@@ -42,8 +42,20 @@ python3 -m http.server 8000
 ## Deployment
 
 GitHub Actions builds and deploys on every push to `main`
-(`.github/workflows/pages.yml`). The repo needs **Settings > Pages > Source: GitHub
-Actions** set once.
+(`.github/workflows/pages.yml`). **Settings > Pages > Source: GitHub Actions** is
+already set.
+
+If a push ever lands without a deploy following it, trigger one by hand:
+
+```sh
+gh workflow run pages.yml
+```
+
+or use **Run workflow** on the Actions tab. This happens when the push was made
+with a token GitHub treats as automation, such as the `gh` CLI's own OAuth token,
+because GitHub deliberately does not let automated pushes start workflow runs. A
+push from an ordinary `git push` on your machine, or an edit made in the GitHub
+web editor, triggers it normally.
 
 The custom domain is pinned by the `CNAME` file, so it survives redeploys. DNS at
 Namecheap points the apex at GitHub's four Pages addresses and `www` at
