@@ -1,0 +1,289 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacy Policy. Cue</title>
+<meta name="description" content="How Cue handles your people, your notes and your drafts. Short version: they stay on your phone.">
+<link rel="canonical" href="https://sendoncue.com/privacy.html">
+<meta name="theme-color" content="#EBE6D8" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#1F1912" media="(prefers-color-scheme: dark)">
+<link rel="icon" href="/assets/favicon.png" type="image/png">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+<link rel="stylesheet" href="/assets/styles.css">
+</head>
+<body>
+
+<div class="airmail" aria-hidden="true"></div>
+
+<header class="site-head">
+  <div class="wrap">
+    <a class="brand" href="/"><img src="/assets/wordmark.png" alt="Cue"></a>
+    <nav class="nav">
+      <a href="/support.html">Support</a>
+      <a href="/terms.html">Terms</a>
+      <a class="btn btn-sm btn-ghost" href="/">Home</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap prose">
+
+<h1>Privacy Policy</h1>
+<p class="updated">Effective August 6, 2026</p>
+
+<div class="callout">
+  <p><strong>The short version.</strong> Cue has no accounts and no login. The people you
+  add, their dates, your notes and their photos are stored on your iPhone and are
+  never uploaded to us. We run no analytics, no tracking and no advertising. The
+  only thing that ever leaves your device is the small amount of context needed to
+  write one draft, and only when AI drafting is turned on.</p>
+</div>
+
+<p>
+  This policy explains what Cue (the "app") does with your information. Cue is
+  published by Boyar ("we", "us"), the makers of Boyar Gifts. It applies to the Cue
+  iPhone app and to this website at sendoncue.com.
+</p>
+
+<h2>1. What stays on your device</h2>
+
+<p>
+  Everything that makes Cue useful is written to local storage in the app's own
+  private container on your iPhone. That includes:
+</p>
+<ul>
+  <li>the people in your circle: name, phone number, relationship, and any photo you attach</li>
+  <li>the occasions you track: birthdays, anniversaries, one off moments, check in rhythms, holidays and custom dates</li>
+  <li>the notes and gift ideas you write about someone</li>
+  <li>a birth year, if you enter one, so milestone birthdays can be flagged</li>
+  <li>your voice settings, including any sample texts you paste in</li>
+  <li>a short fingerprint of lines Cue has already used for a person, so nobody gets the same message twice</li>
+</ul>
+<p>
+  We cannot see any of it. There is no Cue server holding your circle, because there
+  is no Cue account. If you delete the app, this data is removed with it.
+</p>
+
+<h2>2. Contacts</h2>
+<p>
+  Cue asks for permission to read your contacts only when you choose to import
+  people. If you allow it, Cue reads names, phone numbers, birthdays where the
+  contact card has one, and the small thumbnail photo, and it keeps only the
+  contacts you select on that screen. Nothing from your address book is transmitted
+  off the device. You can decline, import nobody, and add people by hand instead,
+  and you can revoke access at any time in Settings, Privacy and Security, Contacts.
+</p>
+
+<h2>3. Photos</h2>
+<p>
+  If you attach a photo to someone, Cue uses the iOS photo picker, which hands the
+  app only the single image you chose. Cue never receives access to your photo
+  library. The image is scaled down and saved with that person's record on your
+  device.
+</p>
+
+<h2>4. Notifications</h2>
+<p>
+  Reminders are local notifications scheduled by the app on your own phone. There is
+  no push server involved, so no reminder, name or date is ever sent over the
+  network to deliver it. You can turn reminders off inside Cue, or in iOS Settings.
+</p>
+
+<h2>5. AI drafting, the one thing that leaves your phone</h2>
+<p>
+  Cue can write drafts in two ways. On device, it uses a library of lines that ships
+  inside the app, and nothing goes over the network at all. With AI drafting, Cue
+  sends a small request over an encrypted connection to our drafting service, which
+  passes it to Anthropic's Claude to generate the lines and returns them.
+</p>
+
+<p>Here is exactly what is in that request, and what is not:</p>
+
+<div class="table-scroll">
+<table>
+  <tr><th>Sent</th><th>Never sent</th></tr>
+  <tr>
+    <td>
+      the person's first name only<br>
+      the occasion, for example birthday<br>
+      the relationship, for example friend<br>
+      the tones you picked for them<br>
+      the notes you wrote about them<br>
+      your sample texts and voice settings
+    </td>
+    <td>
+      their phone number<br>
+      their last name<br>
+      their photo<br>
+      their birth date or birth year<br>
+      your contact list<br>
+      any device or advertising identifier
+    </td>
+  </tr>
+</table>
+</div>
+
+<p>
+  The request carries no account, no login and no device identifier, so it is not
+  linked to you. Our drafting service handles it in memory and writes nothing to a
+  database. Anthropic does not use content submitted through its API to train its
+  models, and holds requests only briefly for abuse monitoring before deleting them.
+  We do not keep the drafts. They come back to your phone and live only there.
+</p>
+<p>
+  If you would rather nothing at all left your device, use Cue without AI drafting.
+  The on device library covers every occasion Cue supports.
+</p>
+
+<h2>6. Sending a message</h2>
+<p>
+  Cue never sends a text on your behalf and technically cannot. It hands a draft to
+  the standard iOS message composer, and you send it yourself from your own number.
+  The content and the recipient go from your phone through Apple and your carrier in
+  the ordinary way. Cue does not see whether you sent it, and does not read your
+  message history.
+</p>
+
+<h2>7. Purchases</h2>
+<p>
+  Subscriptions are sold through Apple's In App Purchase system. Apple processes the
+  payment, and we never receive your card number, billing address or Apple Account
+  credentials. Apple tells the app whether a valid subscription exists so features
+  can unlock, and gives us anonymous, aggregated sales reports. Apple's handling of
+  your purchase is governed by
+  <a href="https://www.apple.com/legal/privacy/" rel="noopener">Apple's privacy policy</a>.
+</p>
+
+<h2>8. What we do not do</h2>
+<ul>
+  <li>No analytics or crash reporting SDKs of any kind</li>
+  <li>No advertising, ad networks or advertising identifiers</li>
+  <li>No tracking of you across other apps or websites</li>
+  <li>No selling or sharing of personal information, ever, to anyone</li>
+  <li>No profiles built about you</li>
+</ul>
+<p>
+  Under laws such as the California Consumer Privacy Act, we do not sell or share
+  personal information, and we have no such information to disclose or delete
+  because we do not hold any.
+</p>
+
+<h2>9. This website</h2>
+<p>
+  sendoncue.com is a set of static pages served by GitHub Pages. It sets no cookies,
+  loads no third party fonts, scripts or trackers, and has no analytics. GitHub keeps
+  standard server logs, including IP addresses, for security and for the delivery of
+  the pages, as described in
+  <a href="https://docs.github.com/site-policy/privacy-policies/github-privacy-statement" rel="noopener">GitHub's privacy statement</a>.
+  If you email us, we receive whatever you write and your email address, and we use
+  it only to reply.
+</p>
+
+<h2>10. Service providers</h2>
+<p>We keep the list short on purpose:</p>
+<div class="table-scroll">
+<table>
+  <tr><th>Who</th><th>What for</th><th>What they receive</th></tr>
+  <tr>
+    <td>Apple</td>
+    <td>App distribution and subscription billing</td>
+    <td>Your purchase, handled entirely by Apple</td>
+  </tr>
+  <tr>
+    <td>Supabase</td>
+    <td>Hosts our drafting function</td>
+    <td>The draft request in section 5, in memory only</td>
+  </tr>
+  <tr>
+    <td>Anthropic</td>
+    <td>Generates the draft lines</td>
+    <td>The draft request in section 5</td>
+  </tr>
+  <tr>
+    <td>GitHub</td>
+    <td>Serves this website</td>
+    <td>Standard web server logs</td>
+  </tr>
+</table>
+</div>
+
+<h2>11. Children</h2>
+<p>
+  Cue is not directed to children under 13, and we do not knowingly collect
+  information from them. Since the app collects nothing to a server, there is
+  nothing for us to delete, but if you believe a child has used the app and you have
+  a concern, write to us and we will help.
+</p>
+
+<h2>12. Your choices</h2>
+<ul>
+  <li><strong>Revoke Contacts access</strong> in iOS Settings, Privacy and Security, Contacts, Cue</li>
+  <li><strong>Turn reminders off</strong> in Cue's Settings tab, or in iOS Settings, Notifications</li>
+  <li><strong>Skip AI drafting</strong> and stay entirely on device</li>
+  <li><strong>Erase everything</strong> with Clear All Data in Cue's Settings tab</li>
+  <li><strong>Delete the app</strong>, which removes all of its stored data from your iPhone</li>
+</ul>
+<p>
+  If you are in the European Economic Area or the United Kingdom, the rights of
+  access, correction, erasure, restriction, objection and portability apply to
+  personal data a company holds about you. We hold none, so these rights are
+  satisfied on your own device by the controls above. You may still write to us with
+  a request and we will respond.
+</p>
+
+<h2>13. Security</h2>
+<p>
+  Data on your iPhone is protected by iOS app sandboxing and device encryption.
+  Requests to the drafting service travel over TLS. Because we store nothing, there
+  is no database of Cue users to breach.
+</p>
+
+<h2>14. Where things are processed</h2>
+<p>
+  Cue is operated from the United States. If you use AI drafting from outside the
+  United States, that one request is processed on servers in the United States.
+</p>
+
+<h2>15. Changes</h2>
+<p>
+  If this policy changes we will update the effective date at the top, and for any
+  material change we will say so in the app before it takes effect. Older versions
+  are visible in the public repository this site is built from.
+</p>
+
+<h2>16. Contact</h2>
+<p>
+  Questions, requests, or anything that feels wrong:
+  <a href="mailto:hello@sendoncue.com">hello@sendoncue.com</a>. We read every message.
+</p>
+
+</main>
+
+<div class="airmail" aria-hidden="true"></div>
+
+<footer class="site-foot">
+  <div class="wrap inner">
+    <div>
+      <img class="mark" src="/assets/wordmark.png" alt="Cue">
+      <p class="script" style="margin:0">the perfect text, right on cue.</p>
+    </div>
+    <div>
+      <div class="foot-links">
+        <a href="/">Home</a>
+        <a href="/support.html">Support</a>
+        <a href="/privacy.html">Privacy</a>
+        <a href="/terms.html">Terms</a>
+        <a href="https://boyargifts.com" rel="noopener">Boyar Gifts</a>
+      </div>
+      <p class="fine">
+        Made in New York. Questions go to
+        <a href="mailto:hello@sendoncue.com">hello@sendoncue.com</a>.<br>
+        Copyright 2026 Cue. All rights reserved.
+      </p>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
