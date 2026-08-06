@@ -168,6 +168,21 @@ a:hover { color: var(--accent-deep); }
 
 h1, h2, h3, .serif { font-family: var(--serif); font-weight: 600; letter-spacing: -0.01em; }
 
+/* Line breaking.
+   balance: spreads a heading evenly across its lines instead of leaving a
+   single word stranded underneath a full one.
+   pretty: keeps body copy from ending on a widow, and avoids starting a new
+   sentence one or two words before a wrap.
+   Both degrade to normal wrapping where unsupported, so nothing breaks. */
+h1, h2, h3, .lede, .thread-cap, .cta-sub, .hero-note, .price-note, summary {
+  text-wrap: balance;
+}
+p, li, dd, .prose li, figcaption {
+  text-wrap: pretty;
+}
+/* Never strand the last word of a link or a price on its own line. */
+.occasions strong, .price .per, .fine { text-wrap: pretty; }
+
 h1 {
   font-size: clamp(38px, 6.4vw, 62px);
   line-height: 1.06;
@@ -384,6 +399,9 @@ section { padding-block: clamp(56px, 9vw, 92px); scroll-margin-top: 58px; positi
   margin-bottom: 14px;
 }
 .card p { color: var(--ink-2); margin: 0; font-size: 16px; }
+/* margin:0 above is right for a single paragraph in a card, but it welds
+   consecutive ones into one block with no air between the sentences. */
+.card p + p { margin-top: 0.9em; }
 
 /* ---------- occasion list ---------- */
 
