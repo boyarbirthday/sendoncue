@@ -107,15 +107,15 @@ a:hover { color: var(--accent-deep); }
   align-items: center;
   justify-content: space-between;
   gap: 20px;
-  min-height: 62px;
+  min-height: 50px;
 }
 .brand { display: flex; align-items: center; gap: 10px; text-decoration: none; }
-.brand img { width: 62px; }
+.brand img { width: 52px; }
 .brand .sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); }
 
-.nav { display: flex; align-items: center; gap: 26px; }
+.nav { display: flex; align-items: center; gap: 22px; }
 .nav a {
-  font-size: 15px;
+  font-size: 14px;
   color: var(--ink-2);
   text-decoration: none;
   transition: color 0.15s ease;
@@ -156,7 +156,7 @@ a:hover { color: var(--accent-deep); }
 }
 .btn-ghost:hover { background: var(--paper); color: var(--ink); filter: none; }
 
-.btn-sm { min-height: 38px; padding: 0 16px; font-size: 15px; }
+.btn-sm { min-height: 32px; padding: 0 15px; font-size: 14px; }
 
 /* A badge, not a link. Used for the App Store CTA until the listing exists, so
    nothing invites a click that would go nowhere. */
@@ -209,7 +209,8 @@ h3 { font-size: 20px; line-height: 1.25; margin: 0 0 6px; }
   color: var(--ink-2);
 }
 
-section { padding-block: clamp(56px, 9vw, 92px); scroll-margin-top: 70px; position: relative; }
+/* scroll-margin-top tracks the sticky header, so anchor jumps do not land under it. */
+section { padding-block: clamp(56px, 9vw, 92px); scroll-margin-top: 58px; position: relative; }
 .section-head { max-width: 40em; margin-bottom: 40px; }
 
 /* Alternating paper bands so each section reads as its own sheet rather than one
