@@ -1,6 +1,13 @@
 # Getting sendoncue.com live
 
-Three things, in this order. Only the first one is urgent.
+**Already done.** The repo exists, Pages is on, the site is built and serving, and
+the custom domain is registered on GitHub's side:
+
+- Live now at <https://boyarbirthday.github.io/sendoncue/>
+- Every push to `main` redeploys in about a minute
+
+**Left to do**, all of it at Namecheap and all of it Raquel only: sections 0, 3 and
+4 below. Sections 1 and 2 are kept as a record of how it was set up.
 
 ---
 
@@ -17,7 +24,7 @@ press **VERIFY CONTACTS** in the domain list to have it resent.
 
 ---
 
-## 1. Create the repository and push
+## 1. Create the repository and push (done)
 
 The site lives in its own repository rather than inside the app repo, for one
 reason: **GitHub Pages on a free organization only serves public repositories**,
@@ -34,16 +41,14 @@ that ships in the app anyway.
 
 ---
 
-## 2. Turn Pages on
+## 2. Turn Pages on (done)
 
-In the new repo: **Settings, Pages, Build and deployment, Source: GitHub Actions**.
+Source is set to **GitHub Actions**, and `.github/workflows/pages.yml` deploys on
+every push to `main`. The first run is green and the site is serving.
 
-That is the only click needed. `.github/workflows/pages.yml` already handles the
-rest, and it runs on every push to `main`. Watch the first run under the Actions
-tab; it takes about a minute.
-
-At this point the site is live at `https://boyarbirthday.github.io/sendoncue/`.
-The custom domain comes next.
+The custom domain `sendoncue.com` is also already registered on GitHub's side, both
+by the `CNAME` file in this repo and through the Pages settings. It will start
+working the moment DNS points at it, which is the next section.
 
 ---
 
@@ -143,12 +148,16 @@ on the domain reads better on an App Store listing than a Gmail address.
 
 ## Checklist
 
-- [ ] Domain contact verified at Namecheap, so the domain is not suspended
-- [ ] `boyarbirthday/sendoncue` created as public and pushed
-- [ ] Settings, Pages, Source set to GitHub Actions
-- [ ] First workflow run finished green
+- [x] `boyarbirthday/sendoncue` created as public and pushed
+- [x] Settings, Pages, Source set to GitHub Actions
+- [x] First workflow run finished green, site serving at boyarbirthday.github.io/sendoncue
+- [x] Custom domain `sendoncue.com` registered on GitHub
+- [ ] **Domain contact verified at Namecheap, so the domain is not suspended**
 - [ ] Namecheap on BasicDNS, parking records deleted, four A records plus the www CNAME added
-- [ ] Custom domain confirmed on GitHub and the DNS check passed
-- [ ] Enforce HTTPS ticked
+- [ ] GitHub DNS check passed, then Enforce HTTPS ticked
 - [ ] `hello@sendoncue.com` forwarding set up and tested
 - [ ] All four pages load over https on a phone
+
+As of the last check, `sendoncue.com` still resolves to `192.64.119.215`, which is
+Namecheap's parking page. That is the one thing standing between the site and the
+domain.
