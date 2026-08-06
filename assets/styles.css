@@ -102,20 +102,6 @@ a:hover { color: var(--accent-deep); }
   backdrop-filter: saturate(160%) blur(14px);
   -webkit-backdrop-filter: saturate(160%) blur(14px);
 }
-/* Par avion trim under the header, matching the app's tab bar. */
-.site-head::after {
-  content: "";
-  position: absolute;
-  left: 0; right: 0; bottom: 0;
-  height: 3px;
-  background: repeating-linear-gradient(
-    -45deg,
-    var(--teal) 0 9px,
-    var(--paper) 9px 18px,
-    var(--terracotta) 18px 27px,
-    var(--paper) 27px 36px
-  );
-}
 .site-head .wrap {
   display: flex;
   align-items: center;
@@ -172,6 +158,12 @@ a:hover { color: var(--accent-deep); }
 
 .btn-sm { min-height: 38px; padding: 0 16px; font-size: 15px; }
 
+/* A badge, not a link. Used for the App Store CTA until the listing exists, so
+   nothing invites a click that would go nowhere. */
+.btn-static { cursor: default; }
+.btn-static:hover { filter: none; }
+.btn-static:active { transform: none; }
+
 /* ---------- type ---------- */
 
 h1, h2, h3, .serif { font-family: var(--serif); font-weight: 600; letter-spacing: -0.01em; }
@@ -197,10 +189,12 @@ h3 { font-size: 20px; line-height: 1.25; margin: 0 0 6px; }
   max-width: 34em;
   margin: 0 0 30px;
 }
-/* Mini headers in her hand, sentence case. Script in all caps is unreadable. */
+/* Mini headers in her hand, sentence case. Script in all caps is unreadable.
+   Named Black face first: Snell ships Regular, Bold and Black, and weight 900
+   alone does not always resolve to Black through the family name. */
 .eyebrow {
-  font-family: var(--script);
-  font-weight: 700;
+  font-family: "SnellRoundhand-Black", var(--script);
+  font-weight: 900;
   font-size: clamp(19px, 2.1vw, 24px);
   line-height: 1;
   letter-spacing: 0;
@@ -367,6 +361,10 @@ section { padding-block: clamp(56px, 9vw, 92px); scroll-margin-top: 70px; positi
   );
 }
 
+/* Outlined instead of stamped: a turquoise rule all the way round. */
+.card-outline { border: 1.5px solid var(--accent); }
+.card-outline:hover { border-color: var(--accent); }
+
 .grid { display: grid; gap: 18px; }
 .grid-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
 .grid-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
@@ -400,8 +398,17 @@ section { padding-block: clamp(56px, 9vw, 92px); scroll-margin-top: 70px; positi
   transition: background 0.16s ease;
 }
 .occasions li:last-child { border-bottom: 0; }
-.occasions li:hover { background: var(--paper); }
-.band .occasions li:hover { background: var(--canvas); }
+/* .is-lit is driven by the auto-cycle in index.html, and reads identically to a
+   hover so the section demonstrates itself without anyone touching it. */
+.occasions li:hover,
+.occasions li.is-lit { background: var(--paper); }
+.band .occasions li:hover,
+.band .occasions li.is-lit { background: var(--canvas); }
+.occasions li.is-lit .dot {
+  transform: translateY(-1px) scale(1.45);
+  box-shadow: 0 0 0 5px var(--accent-soft);
+}
+.occasions li.is-lit strong { color: var(--accent); }
 /* One palette: every ink dot is the house turquoise. */
 .dot {
   width: 9px; height: 9px; border-radius: 50%; flex: none;
@@ -418,6 +425,8 @@ section { padding-block: clamp(56px, 9vw, 92px); scroll-margin-top: 70px; positi
 /* Headings sit level with the top of the column beside them, which reads more
    deliberate than vertical centering when the two sides differ a lot in length. */
 .split { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: clamp(28px, 5vw, 60px); align-items: start; }
+/* For pairs where the two halves should read as level, not top-aligned. */
+.split-center { align-items: center; }
 @media (max-width: 820px) { .split { grid-template-columns: 1fr; } }
 
 .thread { display: grid; gap: 10px; }
