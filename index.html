@@ -32,11 +32,7 @@
   "applicationCategory": "LifestyleApplication",
   "operatingSystem": "iOS 17.0 or later",
   "url": "https://sendoncue.com/",
-  "description": "Cue remembers every birthday, anniversary and long overdue hello, drafts the note in your voice, and opens Messages with it ready to send from your own number.",
-  "offers": [
-    { "@type": "Offer", "price": "14.99", "priceCurrency": "USD", "name": "Cue Unlimited, yearly" },
-    { "@type": "Offer", "price": "1.99", "priceCurrency": "USD", "name": "Cue Unlimited, monthly" }
-  ]
+  "description": "Cue remembers every birthday, anniversary and long overdue hello, drafts the note in your voice, and opens Messages with it ready to send from your own number."
 }
 </script>
 </head>
@@ -51,9 +47,9 @@
     </a>
     <nav class="nav">
       <a href="#how" class="hide-sm">How it works</a>
-      <a href="#pricing" class="hide-sm">Pricing</a>
       <a href="/support.html">Support</a>
-      <a class="btn btn-sm" href="mailto:hello@sendoncue.com?subject=Tell%20me%20when%20Cue%20is%20out">Get Cue</a>
+      <!-- Scrolls to the closing section, where the pre-order button lives. -->
+      <a class="btn btn-sm" href="#get">Get Cue</a>
     </nav>
   </div>
 </header>
@@ -62,17 +58,16 @@
 
 <section class="hero">
   <div class="wrap">
-    <div>
+    <div class="hero-copy">
       <img class="hero-mark" src="/assets/wordmark.png" alt="Cue" width="290">
       <h1>The perfect text,<br>right on cue.</h1>
       <p class="lede">
         You never forget the people. You forget the day. Cue remembers, writes the
         note in your voice, and opens Messages with it ready to go.
       </p>
-      <p class="store-pill">Soon on the App Store</p>
       <div class="cta-row">
-        <!-- At launch: swap this mailto for the App Store link (see DEPLOY.md) -->
-        <a class="btn" href="mailto:hello@sendoncue.com?subject=Tell%20me%20when%20Cue%20is%20out">Tell me when it lands</a>
+        <!-- LAUNCH SWAP: replace href="#" with https://apps.apple.com/app/id<APP_ID> -->
+        <a class="btn" href="#">Pre-order on the App Store</a>
         <a class="btn btn-ghost" href="#how">See how it works</a>
       </div>
       <p class="cta-sub">iPhone, iOS 17 and later. Free for up to five people, always.</p>
@@ -127,27 +122,27 @@
     </div>
     <ul class="occasions">
       <li>
-        <span class="dot" style="background:var(--teal)"></span>
+        <span class="dot"></span>
         <div><strong>Birthdays</strong><br>
         <span>Milestone years flagged, so the big ones never land as just another Tuesday.</span></div>
       </li>
       <li>
-        <span class="dot" style="background:var(--terracotta)"></span>
+        <span class="dot"></span>
         <div><strong>Anniversaries</strong><br>
         <span>Theirs, yours, and the ones only you two count.</span></div>
       </li>
       <li>
-        <span class="dot" style="background:var(--ochre)"></span>
+        <span class="dot"></span>
         <div><strong>Big moments</strong><br>
         <span>New job, new baby, first gallery show. They retire themselves once the day passes.</span></div>
       </li>
       <li>
-        <span class="dot" style="background:var(--sage)"></span>
+        <span class="dot"></span>
         <div><strong>Keep in touch</strong><br>
         <span>Set a rhythm, and Cue speaks up when it has been too long.</span></div>
       </li>
       <li>
-        <span class="dot" style="background:var(--slate)"></span>
+        <span class="dot"></span>
         <div><strong>Your own days</strong><br>
         <span>Friendsgiving. The day you met. Whatever you decide counts.</span></div>
       </li>
@@ -157,7 +152,6 @@
 
 <section class="band">
   <div class="wrap split">
-    <img class="perch perch-right perch-low" src="/assets/pigeon.png" alt="" aria-hidden="true">
     <div>
       <p class="eyebrow">your voice</p>
       <h2>It writes like you, not like an app.</h2>
@@ -218,40 +212,6 @@
       </p>
       <p style="margin-bottom:0"><a href="/privacy.html">Read the full privacy policy</a></p>
     </div>
-  </div>
-</section>
-
-<section id="pricing">
-  <div class="wrap">
-    <img class="perch perch-right" src="/assets/pigeon.png" alt="" aria-hidden="true">
-    <div class="section-head">
-      <p class="eyebrow">pricing</p>
-      <h2>Two weeks free. Then it is up to you.</h2>
-      <p style="color:var(--ink-2);margin:0">
-        Unlimited unlocks an unlimited circle and drafting in your voice.
-      </p>
-    </div>
-
-    <div class="price-grid">
-      <article class="card card-stamped price">
-        <span class="tag">Best value</span>
-        <h3 style="margin:0">Unlimited, yearly</h3>
-        <div class="amount">$14.99</div>
-        <p class="per">per year, about $1.25 a month</p>
-      </article>
-      <article class="card price">
-        <h3 style="margin:0">Unlimited, monthly</h3>
-        <div class="amount">$1.99</div>
-        <p class="per">per month</p>
-      </article>
-    </div>
-
-    <p class="price-note">
-      Free for up to five people, always. New subscribers get two weeks of Unlimited
-      free. Payment is charged to your Apple Account at confirmation, and renews
-      automatically unless auto renew is turned off at least 24 hours before the
-      period ends. Cancel any time in your Apple Account settings.
-    </p>
   </div>
 </section>
 
@@ -325,18 +285,15 @@
     <p class="lede" style="margin-left:auto;margin-right:auto">
       It's a whole personality. Cue does the remembering half.
     </p>
-    <p class="store-pill">Soon on the App Store</p>
     <div class="cta-row" style="justify-content:center">
-      <!-- At launch: swap this mailto for the App Store link (see DEPLOY.md) -->
-      <a class="btn" href="mailto:hello@sendoncue.com?subject=Tell%20me%20when%20Cue%20is%20out">Tell me when it lands</a>
+      <!-- LAUNCH SWAP: replace href="#" with https://apps.apple.com/app/id<APP_ID> -->
+      <a class="btn" href="#">Pre-order on the App Store</a>
     </div>
     <p class="cta-sub">iPhone, iOS 17 and later. Free for up to five people, always.</p>
   </div>
 </section>
 
 </main>
-
-<div class="airmail" aria-hidden="true"></div>
 
 <footer class="site-foot">
   <div class="wrap inner">
@@ -348,7 +305,6 @@
       <div class="foot-links">
         <a href="/">Home</a>
         <a href="#how">How it works</a>
-        <a href="#pricing">Pricing</a>
         <a href="/support.html">Support</a>
         <a href="/privacy.html">Privacy</a>
         <a href="/terms.html">Terms</a>
