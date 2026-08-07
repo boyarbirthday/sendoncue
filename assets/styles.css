@@ -293,10 +293,15 @@ section { padding-block: clamp(56px, 9vw, 92px); scroll-margin-top: 58px; positi
   position: absolute;
   z-index: 0;
   top: -14px;
-  right: 2px;
-  width: min(160px, 34vw);
+  right: -46px;
+  width: min(168px, 34vw);
   transform: rotate(3deg);
   filter: drop-shadow(0 10px 18px rgba(53, 41, 26, 0.18));
+}
+/* Between 781 and 1140 the wrap fills the viewport, so the poked-out pigeon
+   would force a horizontal scrollbar. Tuck it back in that band. */
+@media (max-width: 1140px) {
+  .hero-pigeon { right: -6px; }
 }
 .hero-note {
   position: absolute;
@@ -491,6 +496,21 @@ section { padding-block: clamp(56px, 9vw, 92px); scroll-margin-top: 58px; positi
 
 /* The five-voice demo. The label is her hand; the bubble crossfades between
    real Cue drafts. A min-height keeps the card from breathing as lines change. */
+/* The four voice set-up steps. */
+.voice-steps { list-style: none; margin: 0 0 18px; padding: 0; display: grid; gap: 10px; }
+.voice-steps li { display: flex; align-items: flex-start; gap: 12px; color: var(--ink-2); }
+.voice-steps .num {
+  flex: none;
+  width: 27px; height: 27px;
+  display: grid; place-items: center;
+  border-radius: 50%;
+  background: var(--accent-soft);
+  color: var(--accent);
+  font-family: var(--serif);
+  font-size: 14px; font-weight: 600;
+  transform: translateY(1px);
+}
+
 /* Two classes, or .card p (0,1,1) out-specifies this and paints the label ink. */
 .voice-card .voice-label {
   font-family: var(--script);
