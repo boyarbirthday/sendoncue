@@ -32,11 +32,13 @@
 <p class="updated">Effective August 6, 2026</p>
 
 <div class="callout">
-  <p><strong>The short version.</strong> Cue has no accounts and no login. The people you
-  add, their dates, your notes and their photos are stored on your iPhone and are
-  never uploaded to us. We run no analytics, no tracking and no advertising. The
-  only thing that ever leaves your device is the small amount of context needed to
-  write one draft, and only when AI drafting is turned on.</p>
+  <p><strong>The short version.</strong> Your Cue account is just an email and a
+  phone number, used to sign you in and nothing else. The people you add, their
+  dates, your notes and their photos are stored on your iPhone and are never
+  uploaded to us. We run no analytics, no tracking and no advertising. Beyond
+  your account details, the only thing that ever leaves your device is the small
+  amount of context needed to write one draft, and only when AI drafting is
+  turned on.</p>
 </div>
 
 <p>
@@ -60,11 +62,24 @@
   <li>a short fingerprint of lines Cue has already used for a person, so nobody gets the same message twice</li>
 </ul>
 <p>
-  We cannot see any of it. There is no Cue server holding your circle, because there
-  is no Cue account. If you delete the app, this data is removed with it.
+  We cannot see any of it. Your account holds your email and phone number, never
+  your circle. If you delete the app, this data is removed with it.
 </p>
 
-<h2>2. Contacts</h2>
+<h2>2. Your account</h2>
+<p>
+  Signing in takes an email address and a phone number. We email you a one-time
+  code; there is no password. Your email and phone number are stored with our
+  sign-in service, Supabase, and are used to prove you are you and to be reachable
+  about your account, and for nothing else. No marketing lists, no selling, ever.
+</p>
+<p>
+  You can delete your account inside the app: Settings, Account, Delete Account.
+  That removes the account from the sign-in service and erases everything in Cue
+  on your device.
+</p>
+
+<h2>3. Contacts</h2>
 <p>
   Cue asks for permission to read your contacts only when you choose to import
   people. If you allow it, Cue reads names, phone numbers, birthdays where the
@@ -74,7 +89,7 @@
   and you can revoke access at any time in Settings, Privacy and Security, Contacts.
 </p>
 
-<h2>3. Photos</h2>
+<h2>4. Photos</h2>
 <p>
   If you attach a photo to someone, Cue uses the iOS photo picker, which hands the
   app only the single image you chose. Cue never receives access to your photo
@@ -82,14 +97,14 @@
   device.
 </p>
 
-<h2>4. Notifications</h2>
+<h2>5. Notifications</h2>
 <p>
   Reminders are local notifications scheduled by the app on your own phone. There is
   no push server involved, so no reminder, name or date is ever sent over the
   network to deliver it. You can turn reminders off inside Cue, or in iOS Settings.
 </p>
 
-<h2>5. AI drafting, the one thing that leaves your phone</h2>
+<h2>6. AI drafting, the one thing that leaves your phone</h2>
 <p>
   Cue can write drafts in two ways. On device, it uses a library of lines that ships
   inside the app, and nothing goes over the network at all. With AI drafting, Cue
@@ -135,7 +150,7 @@
   The on device library covers every occasion Cue supports.
 </p>
 
-<h2>6. Sending a message</h2>
+<h2>7. Sending a message</h2>
 <p>
   Cue never sends a text on your behalf and technically cannot. It hands a draft to
   the standard iOS message composer, and you send it yourself from your own number.
@@ -144,7 +159,7 @@
   message history.
 </p>
 
-<h2>7. Purchases</h2>
+<h2>8. Purchases</h2>
 <p>
   Subscriptions are sold through Apple's In App Purchase system. Apple processes the
   payment, and we never receive your card number, billing address or Apple Account
@@ -154,7 +169,7 @@
   <a href="https://www.apple.com/legal/privacy/" rel="noopener">Apple's privacy policy</a>.
 </p>
 
-<h2>8. What we do not do</h2>
+<h2>9. What we do not do</h2>
 <ul>
   <li>No analytics or crash reporting SDKs of any kind</li>
   <li>No advertising, ad networks or advertising identifiers</li>
@@ -164,11 +179,11 @@
 </ul>
 <p>
   Under laws such as the California Consumer Privacy Act, we do not sell or share
-  personal information, and we have no such information to disclose or delete
-  because we do not hold any.
+  personal information. What we hold is your email and phone number, and you can
+  delete both yourself, in the app.
 </p>
 
-<h2>9. This website</h2>
+<h2>10. This website</h2>
 <p>
   sendoncue.com is a set of static pages served by GitHub Pages. It sets no cookies,
   loads no third party fonts, scripts or trackers, and has no analytics. GitHub keeps
@@ -179,7 +194,7 @@
   it only to reply.
 </p>
 
-<h2>10. Service providers</h2>
+<h2>11. Service providers</h2>
 <p>We keep the list short on purpose:</p>
 <div class="table-scroll">
 <table>
@@ -191,13 +206,13 @@
   </tr>
   <tr>
     <td>Supabase</td>
-    <td>Hosts our drafting function</td>
-    <td>The draft request in section 5, in memory only</td>
+    <td>Sign-in, and hosts our drafting function</td>
+    <td>Your account email and phone number, plus the draft request in section 6, in memory only</td>
   </tr>
   <tr>
     <td>Anthropic</td>
     <td>Generates the draft lines</td>
-    <td>The draft request in section 5</td>
+    <td>The draft request in section 6</td>
   </tr>
   <tr>
     <td>GitHub</td>
@@ -207,7 +222,7 @@
 </table>
 </div>
 
-<h2>11. Children</h2>
+<h2>12. Children</h2>
 <p>
   Cue is not directed to children under 13, and we do not knowingly collect
   information from them. Since the app collects nothing to a server, there is
@@ -215,43 +230,45 @@
   a concern, write to us and we will help.
 </p>
 
-<h2>12. Your choices</h2>
+<h2>13. Your choices</h2>
 <ul>
   <li><strong>Revoke Contacts access</strong> in iOS Settings, Privacy and Security, Contacts, Cue</li>
   <li><strong>Turn reminders off</strong> in Cue's Settings tab, or in iOS Settings, Notifications</li>
   <li><strong>Skip AI drafting</strong> and stay entirely on device</li>
+  <li><strong>Delete your account</strong> in Cue's Settings tab, which removes it from the sign-in service</li>
   <li><strong>Erase everything</strong> with Clear All Data in Cue's Settings tab</li>
   <li><strong>Delete the app</strong>, which removes all of its stored data from your iPhone</li>
 </ul>
 <p>
   If you are in the European Economic Area or the United Kingdom, the rights of
   access, correction, erasure, restriction, objection and portability apply to
-  personal data a company holds about you. We hold none, so these rights are
-  satisfied on your own device by the controls above. You may still write to us with
+  personal data a company holds about you. We hold your email and phone number,
+  which you can delete in the app; everything else lives on your own device under
+  the controls above. You may still write to us with
   a request and we will respond.
 </p>
 
-<h2>13. Security</h2>
+<h2>14. Security</h2>
 <p>
   Data on your iPhone is protected by iOS app sandboxing and device encryption.
-  Requests to the drafting service travel over TLS. Because we store nothing, there
-  is no database of Cue users to breach.
+  Requests to the drafting service travel over TLS. Beyond your email and phone
+  number, we store nothing, so there is no database of your people to breach.
 </p>
 
-<h2>14. Where things are processed</h2>
+<h2>15. Where things are processed</h2>
 <p>
   Cue is operated from the United States. If you use AI drafting from outside the
   United States, that one request is processed on servers in the United States.
 </p>
 
-<h2>15. Changes</h2>
+<h2>16. Changes</h2>
 <p>
   If this policy changes we will update the effective date at the top, and for any
   material change we will say so in the app before it takes effect. Older versions
   are visible in the public repository this site is built from.
 </p>
 
-<h2>16. Contact</h2>
+<h2>17. Contact</h2>
 <p>
   Questions, requests, or anything that feels wrong:
   <a href="mailto:hello@sendoncue.com">hello@sendoncue.com</a>. We read every message.
