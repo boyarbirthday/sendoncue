@@ -213,6 +213,8 @@ h3 { font-size: 20px; line-height: 1.25; margin: 0 0 6px; }
   max-width: 34em;
   margin: 0 0 30px;
 }
+/* The hook stands alone on its line, tight over the paragraph it sets up. */
+.lede-hook { margin-bottom: 10px; color: var(--ink); }
 /* Mini headers in Pacifico, sentence case. It ships one weight, 400, and its
    loops need line-height, or the descenders clip. */
 .eyebrow {
@@ -338,8 +340,14 @@ section { padding-block: clamp(56px, 9vw, 92px); scroll-margin-top: 58px; positi
   .hero .wrap { grid-template-columns: 1fr; }
   .hero-art { order: -1; justify-self: center; margin-bottom: 4px; padding-top: 64px; }
   .phone { width: min(232px, 56vw); border-width: 7px; border-radius: 42px; }
-  .hero-pigeon { width: min(126px, 30vw); right: 0; }
-  .hero-note { left: -30px; top: 0; font-size: 13px; }
+  .hero-pigeon { width: min(116px, 28vw); right: -10px; }
+  .hero-note { left: -34px; top: -8px; font-size: 13px; }
+}
+
+/* The smallest phones: shrink both ends so the note and the bird cannot meet. */
+@media (max-width: 360px) {
+  .hero-pigeon { width: 25vw; right: -12px; }
+  .hero-note { left: -20px; top: -12px; font-size: 11.5px; }
 }
 
 /* "Soon on the App Store" chip */
