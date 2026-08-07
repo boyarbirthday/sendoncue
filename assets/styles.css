@@ -1,3 +1,12 @@
+/* Her script face. OFL licensed, self-hosted, one small woff2. */
+@font-face {
+  font-family: "Pacifico";
+  src: url("fonts/pacifico.woff2?v=2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
 /* Cue — sendoncue.com
    Tokens mirror Cue/Theme.swift exactly so the site and the app are one object.
    Type uses the system stack, so an iPhone visitor sees New York and SF Pro:
@@ -28,9 +37,9 @@
   --serif: ui-serif, "New York", Georgia, "Iowan Old Style", "Times New Roman", serif;
   --sans:  -apple-system, BlinkMacSystemFont, "SF Pro Text", system-ui, "Segoe UI",
            Roboto, Helvetica, Arial, sans-serif;
-  /* The nearest thing to her handwriting that ships on the device, and the same
-     face the app used for its tab labels before they became sliced artwork. */
-  --script: "Snell Roundhand", "Apple Chancery", "Savoye LET", "Brush Script MT", cursive;
+  /* Pacifico is the house script now, self-hosted above. The system cursives
+     stay as fallbacks for the instant before the woff2 arrives. */
+  --script: "Pacifico", "Snell Roundhand", "Apple Chancery", "Brush Script MT", cursive;
 
   --gutter: clamp(20px, 5vw, 40px);
   --measure: 62ch;
@@ -174,7 +183,7 @@ h1, h2, h3, .serif { font-family: var(--serif); font-weight: 600; letter-spacing
    pretty: keeps body copy from ending on a widow, and avoids starting a new
    sentence one or two words before a wrap.
    Both degrade to normal wrapping where unsupported, so nothing breaks. */
-h1, h2, h3, .lede, .thread-cap, .cta-sub, .hero-note, .price-note, summary {
+h1, h2, h3, .lede, .thread-cap, .cta-sub, .price-note, summary {
   text-wrap: balance;
 }
 p, li, dd, .prose li, figcaption {
@@ -204,14 +213,13 @@ h3 { font-size: 20px; line-height: 1.25; margin: 0 0 6px; }
   max-width: 34em;
   margin: 0 0 30px;
 }
-/* Mini headers in her hand, sentence case. Script in all caps is unreadable.
-   Named Black face first: Snell ships Regular, Bold and Black, and weight 900
-   alone does not always resolve to Black through the family name. */
+/* Mini headers in Pacifico, sentence case. It ships one weight, 400, and its
+   loops need line-height, or the descenders clip. */
 .eyebrow {
-  font-family: "SnellRoundhand-Black", var(--script);
-  font-weight: 900;
-  font-size: clamp(19px, 2.1vw, 24px);
-  line-height: 1;
+  font-family: var(--script);
+  font-weight: 400;
+  font-size: clamp(17px, 1.9vw, 21px);
+  line-height: 1.4;
   letter-spacing: 0;
   text-transform: none;
   color: var(--accent);
@@ -293,9 +301,10 @@ section { padding-block: clamp(56px, 9vw, 92px); scroll-margin-top: 58px; positi
 .hero-note {
   position: absolute;
   z-index: 2;
-  left: -58px;
+  left: -96px;
   top: 6px;
-  max-width: 184px;
+  width: max-content;
+  max-width: none;
   background: var(--paper);
   border: 1px solid var(--hairline);
   border-radius: 14px;
@@ -325,7 +334,7 @@ section { padding-block: clamp(56px, 9vw, 92px); scroll-margin-top: 58px; positi
   .hero-art { order: -1; justify-self: center; margin-bottom: 4px; padding-top: 64px; }
   .phone { width: min(232px, 56vw); border-width: 7px; border-radius: 42px; }
   .hero-pigeon { width: min(126px, 30vw); right: 0; }
-  .hero-note { left: -46px; top: 2px; max-width: 150px; font-size: 14px; }
+  .hero-note { left: -30px; top: 0; font-size: 13px; }
 }
 
 /* "Soon on the App Store" chip */
@@ -374,19 +383,24 @@ section { padding-block: clamp(56px, 9vw, 92px); scroll-margin-top: 58px; positi
   );
 }
 
-/* The honest-part callout: the app's spotlight-card gradient, cream ink on it.
-   Same colours as the "Amy turns 30" card inside the phone screenshot. */
+/* The honest-part callout, in the wordmark's own blue (sampled #0989AA) with
+   cream ink at full strength so it reads. Heading centred, body in a column. */
 .card-callout {
-  background: linear-gradient(155deg, #136E7E, #0A3B4B);
+  background: linear-gradient(165deg, #149DBD, #0989AA);
   border-color: transparent;
   color: var(--on-ink);
 }
 .card-callout:hover { border-color: transparent; }
-.card-callout h2 { color: var(--on-ink); }
-.card-callout .eyebrow { color: #A9D8E3; }
-.card-callout p { color: color-mix(in srgb, var(--on-ink) 90%, transparent); font-size: 17px; }
-.card-callout a { color: var(--on-ink); }
-.card-callout a:hover { color: #FFFDF6; }
+.card.card-callout .callout-head { text-align: center; margin-bottom: 18px; }
+.card.card-callout h2 { color: #FBF6E8; }
+.card.card-callout .eyebrow { color: #F7F1E1; }
+.card.card-callout .callout-body { max-width: 640px; margin: 0 auto; }
+/* .card.card-callout, or the plain .card p ink rule later in the file ties on
+   specificity and wins on order, which is exactly the unreadable brown-on-blue
+   the last version shipped. */
+.card.card-callout p { color: var(--on-ink); font-size: 17px; }
+.card.card-callout a { color: #FBF6E8; }
+.card.card-callout a:hover { color: #FFFDF6; }
 
 .grid { display: grid; gap: 18px; }
 .grid-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
@@ -479,15 +493,47 @@ section { padding-block: clamp(56px, 9vw, 92px); scroll-margin-top: 58px; positi
    real Cue drafts. A min-height keeps the card from breathing as lines change. */
 /* Two classes, or .card p (0,1,1) out-specifies this and paints the label ink. */
 .voice-card .voice-label {
-  font-family: "SnellRoundhand-Black", var(--script);
-  font-weight: 900;
-  font-size: 25px;
+  font-family: var(--script);
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 1.4;
   color: var(--accent);
   margin: 0 0 10px;
   transition: opacity 0.26s ease;
 }
-.voice-card .thread { min-height: 96px; align-content: start; }
 .voice-card .bubble.you { transition: opacity 0.26s ease; }
+
+/* A little iPhone, open to Messages. */
+.mini-phone {
+  background: #FFFDF6;
+  border: 6px solid #241B10;
+  border-radius: 30px;
+  padding: 14px 14px 16px;
+  max-width: 330px;
+  margin: 0 auto;
+  box-shadow: var(--shadow);
+}
+.mini-head {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid rgba(53, 41, 26, 0.08);
+}
+.mini-avatar { width: 46px; height: 46px; border-radius: 50%; }
+.mini-name { font-size: 12px; color: var(--ink-2); }
+.mini-stamp { text-align: center; font-size: 11px; color: var(--ink-muted); margin: 10px 0 8px; }
+.mini-thread {
+  min-height: 150px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: flex-start;
+  gap: 4px;
+}
+.mini-thread .bubble.you { max-width: 94%; font-size: 15px; }
+.mini-delivered { font-size: 11px; color: var(--ink-muted); padding-right: 6px; }
 
 /* ---------- pricing ---------- */
 

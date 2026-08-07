@@ -74,7 +74,7 @@
     </div>
 
     <div class="hero-art">
-      <div class="hero-note">Amy turns 30 today. Send her a text with Cue.</div>
+      <div class="hero-note">Amy turns 30 today.<br>Send her a text with Cue.</div>
       <img class="hero-pigeon" src="/assets/pigeon.png" alt="" aria-hidden="true">
       <div class="phone">
         <img src="/assets/app-home-light.png" width="520" height="1130"
@@ -169,25 +169,32 @@
         line it has sent, so nobody ever gets the same text twice.
       </p>
     </div>
-    <div class="card voice-card">
+    <div class="card card-stamped voice-card">
       <p class="voice-label" id="voiceTone">cheeky</p>
-      <div class="thread">
-        <div class="bubble you" id="voiceLine">Happy birthday, Amy. Aging like fine wine and questionable decisions.</div>
+      <div class="mini-phone">
+        <div class="mini-head">
+          <img class="mini-avatar" src="/assets/amy.png" alt="" aria-hidden="true">
+          <span class="mini-name">Amy</span>
+        </div>
+        <div class="mini-stamp">Today 9:41 AM</div>
+        <div class="mini-thread">
+          <div class="bubble you" id="voiceLine">Happy birthday, Amy. Aging like fine wine and questionable decisions 😏</div>
+          <div class="mini-delivered">Delivered</div>
+        </div>
       </div>
-      <p class="thread-cap">Same birthday, five voices. Every text goes out from your number.</p>
+      <p class="thread-cap">Same birthday, five voices.<br>Every text goes out from your number.</p>
     </div>
   </div>
 </section>
 
 <section>
   <div class="wrap">
-    <div class="card card-callout" style="padding:clamp(26px,4vw,44px)">
-      <div class="split">
-        <div>
-          <p class="eyebrow">the honest part</p>
-          <h2>Nothing goes out behind your back.</h2>
-        </div>
-        <div>
+    <div class="card card-callout" style="padding:clamp(28px,4vw,48px)">
+      <div class="callout-head">
+        <p class="eyebrow">the honest part</p>
+        <h2>Nothing goes out behind your back.</h2>
+      </div>
+      <div class="callout-body">
           <p>
             iPhone will not let any app text for you, and Cue would not want to.
             Every text goes through your own Messages, from your own number, after
@@ -199,7 +206,6 @@
             only what one text needs to get written, and keeps none of it on a server.
           </p>
           <p style="margin-bottom:0"><a href="/privacy.html">Read the full privacy policy</a></p>
-        </div>
       </div>
     </div>
   </div>
@@ -326,11 +332,11 @@
 
   // The voice demo crossfades through five real Cue drafts of one birthday.
   var VOICES = [
-    ['cheeky', "Happy birthday, Amy. Aging like fine wine and questionable decisions."],
-    ['sweet', "Happiest of birthdays, Amy. Here's to another trip around the sun together."],
-    ['funny', "Happy birthday, Amy. You're not old, you're a classic."],
-    ['classy', "Wishing you a wonderful birthday, Amy. May the year ahead be kind and bright."],
-    ['heartfelt', "Happy birthday, Amy. Grateful for you every day, but especially today."]
+    ['cheeky', "Happy birthday, Amy. Aging like fine wine and questionable decisions \ud83d\ude0f"],
+    ['sweet', "HAPPY BIRTHDAY AMY \ud83c\udf82\ud83d\udc95 so glad the world got you. celebrating you all day, starting now"],
+    ['funny', "you're not old, you're a classic. happy bday :)"],
+    ['classy', "Wishing you a wonderful birthday, Amy. May the year ahead be kind, bright, and full of good company."],
+    ['heartfelt', "Happy birthday, Amy. Grateful for you every day, but especially today \u2764\ufe0f"]
   ];
   var tone = document.getElementById('voiceTone');
   var line = document.getElementById('voiceLine');
