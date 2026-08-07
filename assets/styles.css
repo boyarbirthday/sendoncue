@@ -228,10 +228,8 @@ h3 { font-size: 20px; line-height: 1.25; margin: 0 0 6px; }
 section { padding-block: clamp(56px, 9vw, 92px); scroll-margin-top: 58px; position: relative; }
 .section-head { max-width: 40em; margin-bottom: 40px; }
 
-/* Alternating paper bands so each section reads as its own sheet rather than one
-   endless scroll. Tint only, no rule: a hairline between two near-identical
-   creams reads as a seam rather than a separation. */
-.band { background: color-mix(in srgb, var(--paper) 52%, var(--canvas)); }
+/* One canvas for the entire site. Cards carry the paper tone; the page never
+   changes colour under you. */
 
 /* A pigeon tucked into a corner of the content column, decorative only.
    Anchored to .wrap rather than the section, so it tracks the text instead of
@@ -356,7 +354,6 @@ section { padding-block: clamp(56px, 9vw, 92px); scroll-margin-top: 58px; positi
   overflow: hidden;
   transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
 }
-.band .card { background: var(--canvas); }
 .card:hover {
   transform: translateY(-3px);
   box-shadow: var(--shadow-lift);
@@ -377,9 +374,19 @@ section { padding-block: clamp(56px, 9vw, 92px); scroll-margin-top: 58px; positi
   );
 }
 
-/* Outlined instead of stamped: a turquoise rule all the way round. */
-.card-outline { border: 1.5px solid var(--accent); }
-.card-outline:hover { border-color: var(--accent); }
+/* The honest-part callout: the app's spotlight-card gradient, cream ink on it.
+   Same colours as the "Amy turns 30" card inside the phone screenshot. */
+.card-callout {
+  background: linear-gradient(155deg, #136E7E, #0A3B4B);
+  border-color: transparent;
+  color: var(--on-ink);
+}
+.card-callout:hover { border-color: transparent; }
+.card-callout h2 { color: var(--on-ink); }
+.card-callout .eyebrow { color: #A9D8E3; }
+.card-callout p { color: color-mix(in srgb, var(--on-ink) 90%, transparent); font-size: 17px; }
+.card-callout a { color: var(--on-ink); }
+.card-callout a:hover { color: #FFFDF6; }
 
 .grid { display: grid; gap: 18px; }
 .grid-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
@@ -421,8 +428,6 @@ section { padding-block: clamp(56px, 9vw, 92px); scroll-margin-top: 58px; positi
    hover so the section demonstrates itself without anyone touching it. */
 .occasions li:hover,
 .occasions li.is-lit { background: var(--paper); }
-.band .occasions li:hover,
-.band .occasions li.is-lit { background: var(--canvas); }
 .occasions li.is-lit .dot {
   transform: translateY(-1px) scale(1.45);
   box-shadow: 0 0 0 5px var(--accent-soft);
@@ -465,10 +470,24 @@ section { padding-block: clamp(56px, 9vw, 92px); scroll-margin-top: 58px; positi
 .bubble.you {
   justify-self: end;
   background: var(--accent);
-  color: #FFFDF6;
+  color: var(--on-ink);
   border-bottom-right-radius: 6px;
 }
 .thread-cap { font-size: 13px; color: var(--ink-muted); text-align: center; margin: 4px 0 0; }
+
+/* The five-voice demo. The label is her hand; the bubble crossfades between
+   real Cue drafts. A min-height keeps the card from breathing as lines change. */
+/* Two classes, or .card p (0,1,1) out-specifies this and paints the label ink. */
+.voice-card .voice-label {
+  font-family: "SnellRoundhand-Black", var(--script);
+  font-weight: 900;
+  font-size: 25px;
+  color: var(--accent);
+  margin: 0 0 10px;
+  transition: opacity 0.26s ease;
+}
+.voice-card .thread { min-height: 96px; align-content: start; }
+.voice-card .bubble.you { transition: opacity 0.26s ease; }
 
 /* ---------- pricing ---------- */
 
@@ -496,7 +515,6 @@ section { padding-block: clamp(56px, 9vw, 92px); scroll-margin-top: 58px; positi
 .faq details { border-bottom: 1px solid var(--hairline); padding: 4px 0; }
 .faq details { transition: background 0.16s ease; border-radius: 12px; }
 .faq details:hover { background: var(--paper); }
-.band .faq details:hover { background: var(--canvas); }
 .faq summary {
   cursor: pointer;
   list-style: none;
@@ -525,7 +543,7 @@ section { padding-block: clamp(56px, 9vw, 92px); scroll-margin-top: 58px; positi
 
 /* ---------- footer ---------- */
 
-.site-foot { background: var(--paper); border-top: 1px solid var(--hairline); }
+.site-foot { background: var(--canvas); }
 .site-foot .inner {
   padding-block: 44px;
   display: flex;

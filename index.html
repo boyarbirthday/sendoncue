@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Cue. The perfect text, right on cue.</title>
-<meta name="description" content="Cue remembers every birthday, anniversary and long overdue hello, drafts the note in your voice, and opens Messages with it ready to send from your own number. iPhone app.">
+<meta name="description" content="Cue remembers every birthday, anniversary and long overdue hello, drafts the text in your voice, and opens Messages with it ready to send from your own number. iPhone app.">
 <link rel="canonical" href="https://sendoncue.com/">
 <meta name="theme-color" content="#EBE6D8">
 <meta name="apple-mobile-web-app-title" content="Cue">
@@ -12,12 +12,12 @@
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Cue">
 <meta property="og:title" content="Cue. The perfect text, right on cue.">
-<meta property="og:description" content="Cue remembers the day, writes the note in your voice, and hands it to you ready to send.">
+<meta property="og:description" content="Cue remembers the day, writes the text in your voice, and hands it to you ready to send.">
 <meta property="og:url" content="https://sendoncue.com/">
 <meta property="og:image" content="https://sendoncue.com/assets/icon.png">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Cue. The perfect text, right on cue.">
-<meta name="twitter:description" content="Cue remembers the day, writes the note in your voice, and hands it to you ready to send.">
+<meta name="twitter:description" content="Cue remembers the day, writes the text in your voice, and hands it to you ready to send.">
 <meta name="twitter:image" content="https://sendoncue.com/assets/icon.png">
 
 <link rel="icon" href="/assets/favicon.png" type="image/png">
@@ -32,7 +32,7 @@
   "applicationCategory": "LifestyleApplication",
   "operatingSystem": "iOS 17.0 or later",
   "url": "https://sendoncue.com/",
-  "description": "Cue remembers every birthday, anniversary and long overdue hello, drafts the note in your voice, and opens Messages with it ready to send from your own number."
+  "description": "Cue remembers every birthday, anniversary and long overdue hello, drafts the text in your voice, and opens Messages with it ready to send from your own number."
 }
 </script>
 </head>
@@ -63,7 +63,7 @@
       <h1>The perfect text,<br>right on cue.</h1>
       <p class="lede">
         You never forget the people. You forget the day. Cue remembers, writes the
-        note in your voice, and opens Messages with it ready to go.
+        text in your voice, and opens Messages with it ready to go.
       </p>
       <div class="cta-row">
         <!-- LAUNCH SWAP: make this an <a class="btn" href="https://apps.apple.com/app/id<APP_ID>"> -->
@@ -74,17 +74,17 @@
     </div>
 
     <div class="hero-art">
-      <div class="hero-note">Amy turns 30 today. Want the note?</div>
+      <div class="hero-note">Amy turns 30 today. Send her a text with Cue.</div>
       <img class="hero-pigeon" src="/assets/pigeon.png" alt="" aria-hidden="true">
       <div class="phone">
         <img src="/assets/app-home-light.png" width="520" height="1130"
-             alt="The Cue home screen: today's moment at the top, and a handwritten august calendar on warm paper">
+             alt="The Cue home screen: Amy's birthday at the top with her contact photo, and a handwritten august calendar on warm paper">
       </div>
     </div>
   </div>
 </section>
 
-<section id="how" class="band">
+<section id="how">
   <div class="wrap">
     <img class="perch perch-right" src="/assets/pigeon.png" alt="" aria-hidden="true">
     <div class="section-head">
@@ -100,7 +100,7 @@
       <article class="card card-stamped step">
         <div class="num">2</div>
         <h3>Cue nudges you</h3>
-        <p>A quiet notification that morning, with the draft already inside it.</p>
+        <p>A quiet notification that morning, with the text already written.</p>
       </article>
       <article class="card card-stamped step">
         <div class="num">3</div>
@@ -115,7 +115,7 @@
   <div class="wrap split">
     <div>
       <p class="eyebrow">what it keeps</p>
-      <h2>Every day worth marking.</h2>
+      <h2>Every date worth marking.</h2>
       <p class="lede" style="margin-bottom:0">
         Not just birthdays. The whole calendar of a friendship.
       </p>
@@ -134,7 +134,12 @@
       <li>
         <span class="dot"></span>
         <div><strong>Big moments</strong><br>
-        <span>New job, new baby, first gallery show. They retire themselves once the day passes.</span></div>
+        <span>New job, new baby, first gallery show. Cue reminds you once, on the day, then lets it go.</span></div>
+      </li>
+      <li>
+        <span class="dot"></span>
+        <div><strong>Holidays</strong><br>
+        <span>Christmas, Easter, Hanukkah. The whole festive calendar, every year.</span></div>
       </li>
       <li>
         <span class="dot"></span>
@@ -150,72 +155,57 @@
   </div>
 </section>
 
-<section class="band">
+<section>
   <div class="wrap split split-center">
     <div>
       <p class="eyebrow">your voice</p>
       <h2>It writes like you, not like an app.</h2>
       <p style="color:var(--ink-2)">
-        Paste in a few texts you have actually sent. Cue picks up your rhythm, your
-        emoji habit, your pet names, and writes in that voice.
+        Paste in a few texts you have actually sent, then set the dials: how much
+        emoji, how long you run, how warm you get, which pet names are allowed.
       </p>
       <p style="color:var(--ink-2);margin-bottom:0">
-        It remembers every line it has used, so nobody gets the same one twice.
+        Every draft comes out sounding like you. And Cue keeps a record of every
+        line it has sent, so nobody ever gets the same text twice.
       </p>
     </div>
-    <div class="card">
+    <div class="card voice-card">
+      <p class="voice-label" id="voiceTone">cheeky</p>
       <div class="thread">
-        <div class="bubble them">guess who just got the job</div>
-        <div class="bubble you">STOP. you did not. ok when are we celebrating, I'm buying</div>
+        <div class="bubble you" id="voiceLine">Happy birthday, Amy. Aging like fine wine and questionable decisions.</div>
       </div>
-      <p class="thread-cap">A draft Cue wrote. Sent from your number, in your words.</p>
+      <p class="thread-cap">Same birthday, five voices. Every text goes out from your number.</p>
     </div>
   </div>
 </section>
 
 <section>
   <div class="wrap">
-    <div class="card card-outline" style="padding:clamp(26px,4vw,44px)">
+    <div class="card card-callout" style="padding:clamp(26px,4vw,44px)">
       <div class="split">
         <div>
           <p class="eyebrow">the honest part</p>
           <h2>Nothing goes out behind your back.</h2>
         </div>
         <div>
-          <p style="color:var(--ink-2);margin-top:0">
-            iPhone will not let any app text for you, and Cue would not want to. Every
-            note goes through your own Messages, after you have read it.
+          <p>
+            iPhone will not let any app text for you, and Cue would not want to.
+            Every text goes through your own Messages, from your own number, after
+            you have read it. That is why it lands like you wrote it. Because you did.
           </p>
-          <p style="color:var(--ink-2);margin-bottom:0">
-            That is why it lands like you wrote it. Because you did.
+          <p>
+            And your people stay yours. The circle, the dates, the sample texts you
+            paste in: all of it lives on your phone. With AI drafting on, Cue sends
+            only what one text needs to get written, and keeps none of it on a server.
           </p>
+          <p style="margin-bottom:0"><a href="/privacy.html">Read the full privacy policy</a></p>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<section class="band">
-  <div class="wrap split">
-    <div>
-      <p class="eyebrow">privacy</p>
-      <h2>Your people stay on your phone.</h2>
-    </div>
-    <div>
-      <p style="color:var(--ink-2);margin-top:0">
-        Your circle, their dates and your notes are saved on your device. No account,
-        nothing to sign into.
-      </p>
-      <p style="color:var(--ink-2)">
-        Contacts opens only when you ask it to. With AI drafting on, the details for
-        one note are sent, used, and discarded. Nothing is stored, nothing trains a model.
-      </p>
-      <p style="margin-bottom:0"><a href="/privacy.html">Read the full privacy policy</a></p>
-    </div>
-  </div>
-</section>
-
-<section id="faq" class="faq band">
+<section id="faq" class="faq">
   <div class="wrap">
     <p class="eyebrow">questions</p>
     <h2 style="margin-bottom:22px">The ones people ask.</h2>
@@ -224,21 +214,17 @@
       <summary>Does Cue text people for me automatically?</summary>
       <p>
         No, and it cannot. iOS does not let any app send a message without you. Cue
-        writes the draft and opens Messages with it loaded. You press send.
+        writes the text and opens Messages with it loaded. You press send.
       </p>
     </details>
 
-    <details>
-      <summary>Do I need an account?</summary>
-      <p>No. No sign up, no password. Open it and start adding people.</p>
-    </details>
-
-    <details>
-      <summary>Where do my contacts and notes live?</summary>
+        <details>
+      <summary>Where does everything live?</summary>
       <p>
-        On your iPhone. Cue asks for Contacts only when you choose to import, and
-        keeps only who you pick. The <a href="/privacy.html">privacy policy</a> has
-        the full detail.
+        On your iPhone. Your circle, their dates, your notes and the texts you
+        paste in are all saved on your phone. Cue asks for Contacts only when you
+        choose to import, and keeps only who you pick. The
+        <a href="/privacy.html">privacy policy</a> has the full detail.
       </p>
     </details>
 
@@ -315,39 +301,78 @@
 
 
 <script>
-// Walk the occasions list on a loop so the section shows what it does without
-// anyone hovering. Pauses off-screen and on hover, and sits out entirely for
-// anyone who has asked for reduced motion.
+// Both little animations run off the rendering clock rather than timers: they
+// advance only while their element is actually on screen and being drawn, they
+// pause on hover, and they sit out under prefers-reduced-motion.
 (function () {
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+  function onScreen(el) {
+    var r = el.getBoundingClientRect();
+    return r.bottom > 60 && r.top < innerHeight - 60 && r.width > 0;
+  }
+
+  // The occasions list lights one row at a time.
   var list = document.querySelector('.occasions');
-  if (!list || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
-  var items = [].slice.call(list.children);
-  if (!items.length) return;
-
-  var i = -1, timer = null, visible = false, hovering = false;
-
-  function step() {
-    items.forEach(function (el) { el.classList.remove('is-lit'); });
-    i = (i + 1) % items.length;
-    items[i].classList.add('is-lit');
-  }
-  function run() {
-    if (timer || !visible || hovering) return;
-    step();
-    timer = setInterval(step, 2000);
-  }
-  function halt(clear) {
-    if (timer) { clearInterval(timer); timer = null; }
-    if (clear) items.forEach(function (el) { el.classList.remove('is-lit'); });
+  var items = list ? [].slice.call(list.children) : [];
+  var li = -1, lLast = 0, lHover = false;
+  if (list) {
+    list.addEventListener('pointerenter', function () {
+      lHover = true; lLast = 0;
+      items.forEach(function (el) { el.classList.remove('is-lit'); });
+    });
+    list.addEventListener('pointerleave', function () { lHover = false; });
   }
 
-  list.addEventListener('pointerenter', function () { hovering = true; halt(true); });
-  list.addEventListener('pointerleave', function () { hovering = false; run(); });
+  // The voice demo crossfades through five real Cue drafts of one birthday.
+  var VOICES = [
+    ['cheeky', "Happy birthday, Amy. Aging like fine wine and questionable decisions."],
+    ['sweet', "Happiest of birthdays, Amy. Here's to another trip around the sun together."],
+    ['funny', "Happy birthday, Amy. You're not old, you're a classic."],
+    ['classy', "Wishing you a wonderful birthday, Amy. May the year ahead be kind and bright."],
+    ['heartfelt', "Happy birthday, Amy. Grateful for you every day, but especially today."]
+  ];
+  var tone = document.getElementById('voiceTone');
+  var line = document.getElementById('voiceLine');
+  var vcard = line ? line.closest('.card') : null;
+  var vi = 0, vLast = 0, vHover = false;
+  if (vcard) {
+    vcard.addEventListener('pointerenter', function () { vHover = true; });
+    vcard.addEventListener('pointerleave', function () { vHover = false; });
+  }
 
-  new IntersectionObserver(function (entries) {
-    visible = entries[0].isIntersecting;
-    visible ? run() : halt(true);
-  }, { threshold: 0.35 }).observe(list);
+  function frame(ts) {
+    if (items.length && !lHover && onScreen(list)) {
+      if (!lLast) lLast = ts;
+      if (ts - lLast >= 2000) {
+        lLast = ts;
+        items.forEach(function (el) { el.classList.remove('is-lit'); });
+        li = (li + 1) % items.length;
+        items[li].classList.add('is-lit');
+      }
+    } else if (items.length && !onScreen(list)) {
+      lLast = 0;
+    }
+
+    if (vcard && !vHover && onScreen(vcard)) {
+      if (!vLast) vLast = ts;
+      if (ts - vLast >= 3400) {
+        vLast = ts;
+        vi = (vi + 1) % VOICES.length;
+        tone.style.opacity = '0'; line.style.opacity = '0';
+        setTimeout(function () {
+          tone.textContent = VOICES[vi][0];
+          line.textContent = VOICES[vi][1];
+          tone.style.opacity = '1'; line.style.opacity = '1';
+        }, 240);
+      }
+    } else if (vcard && !onScreen(vcard)) {
+      vLast = 0;
+    }
+
+    requestAnimationFrame(frame);
+  }
+  requestAnimationFrame(frame);
 })();
 </script>
 </body>
